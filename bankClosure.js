@@ -14,13 +14,11 @@
 
 function createBankAccount(initialBalance) {
     let balance = initialBalance;
-
     return {
         deposit: (amount) => {
             balance += amount;
             console.log("Deposited", amount, "Balance:", balance);
         },
-
         withDraw: (amount) => {
             if (balance < amount) {
                 console.warn("Insufficient Fund!");
@@ -29,7 +27,6 @@ function createBankAccount(initialBalance) {
                 console.log("Withdrawn", amount, "Balance:", balance);
             }
         },
-
         checkBalance: () => {
             console.log("The current balance is:", balance);
         }
@@ -37,7 +34,6 @@ function createBankAccount(initialBalance) {
 } 
 
 const AdiAccount = createBankAccount(1000);
-
 AdiAccount.withDraw(300);   
 AdiAccount.checkBalance();    
 AdiAccount.deposit(500);      
