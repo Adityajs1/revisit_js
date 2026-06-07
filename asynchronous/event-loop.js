@@ -1,0 +1,26 @@
+function f1(){
+    console.log("f1");
+}
+
+function f2(){
+    console.log("f2");
+}
+
+function main(){
+    console.log("main");
+    setTimeout(f1, 0);                // Task/Callback queue
+
+    new Promise((resolve, reject)=>{
+        resolve("I am a Promise")
+    }).then(                            // Job Queue
+        (result)=>{
+            console.log(result);
+        }
+    )
+    f2();
+
+}
+
+main();
+    
+    
