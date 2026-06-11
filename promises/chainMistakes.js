@@ -1,39 +1,53 @@
-let promise = new Promise(function(resolve, reject){
-    resolve(10);
-})
+// let promise = new Promise(function(resolve, reject){
+//     resolve(10);
+// })
+
+// // promise.then(
+// //     (value)=>{
+// //         value++;
+// //         return value;
+// //     }
+// // )
+// // promise.then(
+// //     (value)=>{
+// //         value = value + 10;      // that is not a ppromise chaining
+// //         return value;
+// //     }
+// // )
+// // promise.then(
+// //     (value)=>{
+// //         value = value + 20;
+// //         console.log(value); 
+// //     }
+// // )
 
 // promise.then(
 //     (value)=>{
 //         value++;
 //         return value;
 //     }
-// )
-// promise.then(
+// ).then(
 //     (value)=>{
-//         value = value + 10;      // that is not a ppromise chaining
+//         value = value + 10;  // this is actually a promise chaining
 //         return value;
 //     }
-// )
-// promise.then(
+// ).then(
 //     (value)=>{
-//         value = value + 20;
-//         console.log(value); 
+//         value = value+20
+//         console.log(value);
 //     }
 // )
 
-promise.then(
-    (value)=>{
-        value++;
-        return value;
+const getPromise = new Promise(function(resolve, reject){
+        resolve("I am running!")
+})
+
+getPromise.then(
+    (result)=>{
+        console.log(result);
     }
-).then(
-    (value)=>{
-        value = value + 10;  // this is actually a promise chaining
-        return value;
-    }
-).then(
-    (value)=>{
-        value = value+20
-        console.log(value);
+).catch(
+    (error)=>{
+        console.log(error);
     }
 )
