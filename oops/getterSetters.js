@@ -6,7 +6,6 @@ class Animal{
     get name(){
         return `The anima is ${this._name}`
     }
-
     set name(value){
 
         if(!value){
