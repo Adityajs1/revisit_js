@@ -1,24 +1,34 @@
 class Animal{
-    constructor(name){
-        this.name = name;
+    constructor (name){
+      this.name = name
     }
 
     get name(){
-        return this._name
+        return `The anima is ${this._name}`
     }
 
     set name(value){
+
         if(!value){
-            console.error("there is no error")
+            console.error("There is no name")
             return;
         }
         if(value.length <= 2){
-            console.log("The value must be of more than 2 characters!");
+            console.log("The name is too small!")
             return;
         }
         this._name = value
     }
 }
 
-const animal = new Animal("Aditya")
-console.log(animal.name);
+const a = new Animal("Cow")
+console.log(a.name);
+
+// static properties
+
+class MyClass{
+    static staticMethod(){
+        console.log(this);
+    }
+}
+MyClass.staticMethod
