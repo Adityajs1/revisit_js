@@ -24,3 +24,5 @@ function makeCounter(start){
 
 const startCounter = makeCounter(5);
 console.log(startCounter.increment());
+console.log(startCounter.decrement());
+console.log(startCounter.reset());
