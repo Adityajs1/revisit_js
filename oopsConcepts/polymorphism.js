@@ -15,3 +15,5 @@ class ElectricCar extends Car {
 
 const myCars = [new Car(), new ElectricCar()];
 myCars.forEach(car => car.drive());
+
+
